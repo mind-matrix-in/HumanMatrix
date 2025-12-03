@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>{{ page.title | default: "Human Matrix" }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
     <meta charset="utf-8">
     <style>
     body { 
@@ -255,6 +255,19 @@
     .sidebar h2 {
         font-size: 1.3em;
         text-align: center;
+    }
+}
+/* Фикс для мобильных браузеров и WebView */
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px; /* Принудительно увеличиваем базовый размер */
     }
 }
 </style>
